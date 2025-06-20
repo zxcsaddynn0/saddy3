@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Контакты</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="contact">
+ <header>
+  <div class="logo">
+
+    <svg class="logo-icon" viewBox="0 0 64 64" width="32" height="32">
+      <path d="M32 10 L42 50 L32 44 L22 50 Z" fill="#007AFF"/>
+      <rect x="28" y="44" width="8" height="12" fill="#333"/>
+      <circle cx="32" cy="10" r="4" fill="#fff"/>
+      <g class="flame">
+        <path d="M28 56 Q32 62 36 56 Q34 58 32 60 Q30 58 28 56 Z" fill="orange" opacity="0.8"/>
+      </g>
+    </svg>
+    StarCrafts
+  </div>
+
+
+  <nav class="fade-in">
+    <a href="index.html" class="menu-item">
+      <svg viewBox="0 0 24 24" width="18" height="18" class="menu-icon">
+        <path d="M3 12 L8 7 L12 11 L16 7 L21 12 L16 17 L12 13 L8 17 Z" fill="white"/>
+      </svg>
+      Главная
+    </a>
+    <a href="about.html" class="menu-item">
+      <svg viewBox="0 0 24 24" width="18" height="18" class="menu-icon">
+        <circle cx="12" cy="8" r="4" fill="white"/>
+        <path d="M20 19 C20 14 14 11 12 11 S4 14 4 19" fill="white"/>
+      </svg>
+      О нас
+    </a>
+    <a href="catalog.html" class="menu-item">
+      <svg viewBox="0 0 24 24" width="18" height="18" class="menu-icon">
+        <polygon points="12,3 5,9 5,16 12,21 19,16 19,9" fill="white"/>
+      </svg>
+      Каталог
+    </a>
+    <a href="contact.html" class="menu-item">
+      <svg viewBox="0 0 24 24" width="18" height="18" class="menu-icon">
+        <rect x="2" y="4" width="20" height="12" rx="2" ry="2" fill="white"/>
+        <path d="M2 7 L12 13 L22 7" stroke="white" stroke-width="2" fill="none"/>
+      </svg>
+      Контакты
+    </a>
+  </nav>
+</header>
+
+  <main class="centered">
+    <h1 class="section-title">Свяжитесь с нами</h1>
+    <p class="subtitle">Вы можете связаться с нами через форму ниже или через наши социальные сети:</p>
+    <ul class="socials">
+      <li><i class="fab fa-facebook-f"></i> Facebook</li>
+      <li><i class="fab fa-instagram"></i> Instagram</li>
+      <li><i class="fab fa-twitter"></i> Twitter</li>
+    </ul>
+    <p class="address"><strong>Адрес:</strong> Галактика Андромеды, Звездная система Alpha-7</p>
+    <form id="contactForm">
+      <input type="text" placeholder="Ваше имя" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Сообщение"></textarea>
+<button type="submit">Отправить</button>
+    </form>
+    <div id="status"></div>
+  </main>
+<canvas id="meteorShower" class="background-canvas"></canvas>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("status").textContent = "Сообщение отправлено!";
+      this.reset();
+    });
+  </script>
+    <script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>
